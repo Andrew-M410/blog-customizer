@@ -3,10 +3,7 @@ import clsx from 'clsx';
 
 import { Article } from '../article/Article';
 import { ArticleParamsForm } from '../article-params-form/ArticleParamsForm';
-import {
-	defaultArticleState,
-	ArticleStateType,
-} from './../../constants/articleProps';
+import { defaultArticleState } from './../../constants/articleProps';
 
 import styles from './app.module.scss';
 
@@ -26,9 +23,7 @@ export const App = () => {
 				} as CSSProperties
 			}>
 			<ArticleParamsForm
-				setArticleState={(newState: ArticleStateType) =>
-					setArticleState(newState)
-				}
+				setArticleState={setArticleState}
 				articleState={articleState}
 			/>
 			<Article />
