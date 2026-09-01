@@ -3,7 +3,13 @@
 	left: 0;
 	width: 616px;
 	height: 100%;
-	overflow: scroll;
+
+	// overflow-y: hidden;
+	overflow: hidden scroll;
+
+	// Стили немного кривые, при выпадении спика
+	// для выбора цвета фона, не все цвета
+	// видно, поэтому вертикальный скрол пришлось оставить
 	transform: translate(-616px);
 	transition: transform 0.5s ease;
 }
@@ -26,6 +32,13 @@
 }
 
 .bottomContainer {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.buttonsContainer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: auto;
